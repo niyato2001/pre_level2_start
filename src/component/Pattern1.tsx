@@ -1,8 +1,10 @@
+import { memo } from 'react';
+
 interface Props {
   count: number;
 }
 
-export const Pattern1: React.FC<Props> = ({ count }) => (
+const Pattern1: React.FC<Props> = ({ count }) => (
   <div>
     <h2>
       <span className='mr-4 text-base'>パターン1</span>
@@ -11,3 +13,5 @@ export const Pattern1: React.FC<Props> = ({ count }) => (
     <div> Count:{count}</div>
   </div>
 );
+
+export const Pattern1Memo = memo(Pattern1);

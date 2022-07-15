@@ -1,10 +1,12 @@
+import { memo } from 'react';
+
 interface Props {
   countUp: () => void;
   objCountUp: () => void;
   listCountUp: () => void;
 }
 
-export const Pattern4: React.FC<Props> = ({ countUp, objCountUp, listCountUp }) => (
+const Pattern4: React.FC<Props> = ({ countUp, objCountUp, listCountUp }) => (
   <>
     <h2>
       <span className='mr-4 text-base'>パターン4</span>
@@ -23,3 +25,5 @@ export const Pattern4: React.FC<Props> = ({ countUp, objCountUp, listCountUp }) 
     </div>
   </>
 );
+
+export const Pattern4Memo = memo(Pattern4);
