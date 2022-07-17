@@ -1,8 +1,8 @@
-import { memo } from 'react';
-import { useCount } from '@/hook/useCount';
+import { useRecoilValue } from 'recoil';
+import { countListAtom } from '@/hook/useCount';
 
-const Pattern3: React.FC = () => {
-  const { countList } = useCount();
+export const Pattern3: React.FC = () => {
+  const countList = useRecoilValue(countListAtom);
   return (
     <div>
       <h2>
@@ -13,4 +13,3 @@ const Pattern3: React.FC = () => {
     </div>
   );
 };
-export const Pattern3Memo = memo(Pattern3);
