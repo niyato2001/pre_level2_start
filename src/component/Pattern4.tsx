@@ -1,7 +1,6 @@
-import { memo } from 'react';
 import { useCount } from '@/hook/useCount';
 
-const Pattern4: React.FC = () => {
+export const Pattern4: React.FC = () => {
   const { countUp, objCountUp, listCountUp } = useCount();
   return (
     <>
@@ -23,5 +22,3 @@ const Pattern4: React.FC = () => {
     </>
   );
 };
-
-export const Pattern4Memo = memo(Pattern4);
